@@ -77,6 +77,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 For questions or collaboration inquiries, please open an issue or contact the project maintainers.
 
-Join us in revolutionizing AV content analysis with AI!
+Join us, if u would like to learn and do stuffs, leading to development of open-source AV content analysis with AI!
 
-This README provides an overview of your project, its goals, the technologies involved, and how to get started. It also includes information about the project structure, documentation, and how to contribute. You may want to customize it further based on specific details of your project or any additional information you want to highlight.
+
