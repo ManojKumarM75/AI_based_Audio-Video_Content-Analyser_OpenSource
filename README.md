@@ -67,16 +67,30 @@ Detailed documentation is available in the `docs/` directory:
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for more details.
+This project is maintained by MKM and other graduates from Bits Pilani in Data Science and Artificial Intelligence (WILP).
+We welcome contributions from the community, especially those with expertise or AI enthusiasts in image, audio and video content analysis.
+If you'd like to contribute, please read our [CONTRIBUTING.md](CONTRIBUTING.md) file for guidelines on how to get started.
+
 
 ## 📄 License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 📞 Contact
 
 For questions or collaboration inquiries, please open an issue or contact the project maintainers.
 
 Join us, if u would like to learn and do stuffs, leading to development of open-source AV content analysis with AI!
+
+
+
+
+## About the Project
+
+AI_based_Audio-Video_Content-Analyser_OpenSource is an open-source initiative aimed at developing AI tools for analyzing audio and video content, specifically designed for downlink stations or receiving TVoi (TV over internet) streams. Our project explores cutting-edge AI technologies in image, video, and audio processing to create industry-relevant tools.
+
+For more information on how to use this project, please refer to our [documentation](link-to-documentation).
+
+
 
 
