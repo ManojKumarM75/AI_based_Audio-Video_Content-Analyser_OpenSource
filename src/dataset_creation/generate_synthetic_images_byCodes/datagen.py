@@ -3,8 +3,14 @@ import cv2
 import numpy as np
 import os
 import csv
-
 from configurations import DEMO_CONFIG
+from tqdm import tqdm
+
+isSeed = DEMO_CONFIG['useSeed']
+if isSeed:
+    seed = DEMO_CONFIG['seed']
+    random.random_seed(seed)
+    np.random.random_seed(seed)
 
 def apply_shift(block, shift_x, shift_y):
     """
@@ -101,42 +107,29 @@ def process_extracted_frames(frames_folder, output_folder, base_parameters, num_
         csv_writer = csv.writer(csv_file)
         csv_writer.writerow(['image_name', 'block_size', 'max_shift_value', 'artifact_percentage', 'horizontal', 'start_from_top_or_left'])
 
-        for filename in os.listdir(frames_folder):
-            if filename.endswith('.jpg'):
-                frame = cv2.imread(os.path.join(frames_folder, filename))
-                for _ in range(num_variations):
-                    randomized_params = randomize_parameters(base_parameters)
-                    modified_frame = create_artifacts_with_directional_copying(
-                        frame,
-                        block_size=randomized_params['block_size'],
-                        max_shift_value=randomized_params['max_shift_value'],
-                        artifact_percentage=randomized_params['artifact_percentage'],
-                        horizontal=randomized_params['horizontal'],
-                        start_from_top_or_left=randomized_params['start_from_top_or_left']
-                    )
-                    modified_filename = f"{filename}"
-                    cv2.imwrite(os.path.join(output_folder, modified_filename), modified_frame)
+        # Get the list of image files
+        image_files = [filename for filename in os.listdir(frames_folder) if filename.endswith('.jpg')]
+        for filename in tqdm(image_files, desc="Processing images", unit="image"):
+            frame = cv2.imread(os.path.join(frames_folder, filename))
+            for _ in tqdm(range(num_variations), desc="Generating variations", leave=False):
+                randomized_params = randomize_parameters(base_parameters)
+                modified_frame = create_artifacts_with_directional_copying(
+                    frame,
+                    block_size=randomized_params['block_size'],
+                    max_shift_value=randomized_params['max_shift_value'],
+                    artifact_percentage=randomized_params['artifact_percentage'],
+                    horizontal=randomized_params['horizontal'],
+                    start_from_top_or_left=randomized_params['start_from_top_or_left']
+                )
+                modified_filename = f"{filename}"
+                cv2.imwrite(os.path.join(output_folder, modified_filename), modified_frame)
 
-                    # Write the randomized parameters to the CSV file
-                    csv_writer.writerow([
-                        modified_filename,
-                        randomized_params['block_size'],
-                        randomized_params['max_shift_value'],
-                        randomized_params['artifact_percentage'],
-                        randomized_params['horizontal'],
-                        randomized_params['start_from_top_or_left']
-                    ])
-
-
-input_video_folder = DEMO_CONFIG['input']  # Folder containing videos
-extracted_frames_folder = DEMO_CONFIG['frames']  # Output folder for extracted frames
-modified_frames_folder = DEMO_CONFIG['mod_frames']  # Output folder for modified frames
-
-# Base parameters for randomization
-base_parameters = DEMO_CONFIG['params']
-
-# Number of variations to apply to each frame
-num_variations = DEMO_CONFIG['variations']
-
-
-#process_extracted_frames(extracted_frames_folder, modified_frames_folder, base_parameters, num_variations)
+                # Write the randomized parameters to the CSV file
+                csv_writer.writerow([
+                    modified_filename,
+                    randomized_params['block_size'],
+                    randomized_params['max_shift_value'],
+                    randomized_params['artifact_percentage'],
+                    randomized_params['horizontal'],
+                    randomized_params['start_from_top_or_left']
+                ])
