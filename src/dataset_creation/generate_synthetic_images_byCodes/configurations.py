@@ -12,5 +12,8 @@ DEMO_CONFIG = {
 	    'artifact_percentage_max': 0.7,
 	},
 	'variations': 5,
+	'useSeed': False,
+	'seed' : 43,
+	'fps' : 1,
 }
 
