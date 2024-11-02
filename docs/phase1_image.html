@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<!---MKM 20241011 to 20241102    --->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hands on Study of Computer Vision with Deeep Learning - Roadmap</title>
+    <style>
+        body { 
+            font-family: sans-serif; 
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .collapsible {
+            background-color: #f1f1f1;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            margin: 2px 0;
+        }
+
+        .active, .collapsible:hover {
+            background-color: #ddd;
+        }
+
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f9f9f9;
+        }
+
+        .collapsible:after {
+            content: '\02795'; /* Unicode character for "plus" sign (+) */
+            font-size: 13px;
+            color: #777;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .active:after {
+            content: "\2796"; /* Unicode character for "minus" sign (-) */
+        }
+
+        h1, h2, h3, h4, h5, h6 { margin-top: 1em; }
+        ul { list-style-type: disc; margin-left: 20px; }
+        li { margin-bottom: 0.5em; }
+        .search-terms { font-style: italic; color: #555; }
+    </style>
+</head>
+<body>
+    <h1>Computer Vision Learning Roadmap</h1>
+
+    <!-- Wrap each main section in a button and content div -->
+    <button class="collapsible">I. Image Fundamentals</button>
+    <div class="content">
+<h3>A. Pixel Representation</h3>
+<ul>
+    <li>1. Digital Structure: pixels, 2D arrays, coordinates, intensity values, spatial resolution
+        <div class="search-terms">Search terms: "digital image representation," "pixel coordinates," "image resolution"</div>
+    </li>
+    <li>2. Bit Depth: 1-bit, 8-bit, 24-bit, 32-bit, 48-bit, color quantization, dithering, color banding, dynamic range, storage implications
+        <div class="search-terms">Search terms: "bit depth image," "color quantization," "dithering techniques," "color banding," "dynamic range photography"</div>
+    </li>
+</ul>
+
+<h3>B. Color Spaces</h3>
+<ul>
+    <li>1. RGB: additive model, 8-bit channels, true color, channel separation, sRGB, Adobe RGB
+        <div class="search-terms">Search terms: "RGB color model," "sRGB vs Adobe RGB"</div>
+    </li>
+    <li>2. HSV/HSL: cylindrical model, hue, saturation, value/lightness, color selection
+        <div class="search-terms">Search terms: "HSV color space," "HSL color space," "color picking with HSV"</div>
+    </li>
+    <li>3. YUV/YCbCr: luminance, chrominance, TV/video, compression, subsampling
+        <div class="search-terms">Search terms: "YUV color space," "chroma subsampling"</div>
+    </li>
+    <li>4. Other: LAB, CMYK, Grayscale, Binary
+        <div class="search-terms">Search terms: "LAB color space," "CMYK color model"</div>
+    </li>
+</ul>
+
+<h3>C. Image Histograms</h3>
+<ul>
+    <li>1. Types: intensity, color, cumulative, local, multi-channel
+        <div class="search-terms">Search terms: "image histogram," "color histogram," "cumulative histogram"</div>
+    </li>
+    <li>2. Analysis: peak detection, valley analysis, distribution patterns, statistical measures, histogram matching
+        <div class="search-terms">Search terms: "histogram analysis," "histogram equalization"</div>
+    </li>
+</ul>
+
+<h3>D. Image Formation</h3>
+<ul>
+    <li>Light and color theory, camera sensors, sampling theory, Nyquist frequency, aliasing
+        <div class="search-terms">Search terms: "image formation process," "digital camera sensor," "Nyquist-Shannon sampling theorem," "aliasing artifacts"</div>
+    </li>
+</ul>
+
+<h3>E. Image Properties</h3>
+<ul>
+    <li>1. Spatial: resolution, aspect ratio, DPI/PPI, physical dimensions, spatial frequency
+        <div class="search-terms">Search terms: "image resolution," "aspect ratio," "DPI vs PPI"</div>
+    </li>
+    <li>2. Quality Metrics: SNR, PSNR, SSIM, MSE, perceptual metrics
+        <div class="search-terms">Search terms: "image quality metrics," "PSNR," "SSIM"</div>
+    </li>
+</ul>
+
+<h3>F. File Formats</h3>
+<ul>
+    <li>Lossless Formats: PNG, TIFF, BMP, RAW, GIF
+        <div class="search-terms">Search terms: "lossless image formats," "PNG," "TIFF," "BMP," "RAW image"</div>
+    </li>
+    <li>Lossy Formats: JPEG, JPEG2000, WebP, HEIF, AVIF
+        <div class="search-terms">Search terms: "lossy image formats," "JPEG," "WebP," "HEIF," "AVIF"</div>
+    </li>
+</ul>
+
+<h3>G. Image Acquisition</h3>
+<ul>
+    <li>Capture Devices: Digital cameras, Scanners, Microscopes, Satellite imaging, Medical imaging
+        <div class="search-terms">Search terms: "digital image acquisition," "medical image acquisition," "satellite imaging"</div>
+    </li>
+    <li>Capture Parameters: Exposure, Focus, White balance, ISO sensitivity, Aperture
+        <div class="search-terms">Search terms: "camera settings," "exposure photography," "white balance photography," "ISO sensitivity"</div>
+    </li>
+</ul>
+
+<h3>H. Sampling and Quantization</h3>
+<ul>
+    <li>1. Spatial Sampling: Regular grid, Hexagonal grid, Random sampling, Adaptive sampling, Super-resolution
+        <div class="search-terms">Search terms: "image sampling," "super-resolution imaging"</div>
+    </li>
+    <li>2. Intensity Quantization: Uniform quantization, Non-uniform quantization, Vector quantization, Halftoning, Error diffusion
+        <div class="search-terms">Search terms: "image quantization," "halftoning techniques," "error diffusion"</div>
+    </li>
+</ul>
+    </div>
+
+
+
+
+    <button class="collapsible">II. Image Mathematics</button>
+    <div class="content">
+<h3>A. Basic Operations</h3>
+<ul>
+    <li>Point operations
+        <div class="search-terms">Search terms: "point operations image processing"</div>
+    </li>
+    <li>Neighborhood operations
+        <div class="search-terms">Search terms: "neighborhood operations image processing," "spatial filtering"</div>
+    </li>
+    <li>Geometric operations: translation, rotation, scaling, affine transformations
+        <div class="search-terms">Search terms: "image transformations," "affine transformation matrix," "geometric transformations opencv"</div>
+    </li>
+    <li>Morphological operations: erosion, dilation, opening, closing
+        <div class="search-terms">Search terms: "morphological operations opencv," "erosion dilation opencv"</div>
+    </li>
+    <li>Frequency domain operations
+        <div class="search-terms">Search terms: "frequency domain image processing," "Fourier transform image"</div>
+    </li>
+</ul>
+    </div>
+
+
+
+<button class="collapsible">III. Image Preprocessing</button>
+<div class="content">
+<h3>A. Resizing and Scaling</h3>
+<ul>
+    <li>Interpolation Techniques: Nearest Neighbor, Bilinear Interpolation, Bicubic Interpolation, Lanczos Resampling, Spline Interpolation
+        <div class="search-terms">Search terms: "image resizing," "interpolation methods," "bicubic interpolation," "Lanczos resampling"</div>
+    </li>
+</ul>
+<h3>B. Normalization</h3>
+<ul>
+    <li>Min-max scaling, Standardization (z-score normalization)
+        <div class="search-terms">Search terms: "image normalization," "feature scaling," "min-max normalization," "z-score normalization"</div>
+    </li>
+</ul>
+<h3>C. Noise Reduction</h3>
+<ul>
+    <li>Mean filtering, Gaussian filtering, Median filtering, Bilateral filtering, Non-local means
+        <div class="search-terms">Search terms: "image denoising," "noise reduction filters," "median filter," "bilateral filter opencv"</div>
+    </li>
+</ul>
+<h3>D. Contrast Enhancement</h3>
+<ul>
+    <li>Histogram equalization, Adaptive histogram equalization, CLAHE
+        <div class="search-terms">Search terms: "contrast enhancement," "histogram equalization," "CLAHE opencv"</div>
+    </li>
+</ul>
+ </div>
+
+
+
+
+<button class="collapsible">IV. Core Computer Vision Fundamentals</button>
+<div class="content">
+<h3>A. Image Kernels and Convolution</h3>
+<ul>
+    <li>1. Kernel Fundamentals: Kernel definition and properties, Kernel sizes and shapes, Padding strategies, Stride concepts, Kernel visualization
+        <div class="search-terms">Search terms: "image convolution," "convolutional kernels," "kernel visualization"</div>
+    </li>
+    <li>2. Types of Kernels: Smoothing kernels, Sharpening kernels, Embossing kernels, Custom kernel design, Separable kernels
+        <div class="search-terms">Search terms: "smoothing kernels," "sharpening kernels," "embossing kernels," "separable convolution"</div>
+    </li>
+</ul>
+
+<h3>B. Spatial Filtering</h3>
+<ul>
+    <li>1. Linear Filters: Mean filters, Gaussian filters, Weighted averaging, Box filters, Motion blur filters
+        <div class="search-terms">Search terms: "spatial filtering," "linear filters," "Gaussian blur," "motion blur filter"</div>
+    </li>
+    <li>2. Non-linear Filters: Median filtering, Bilateral filtering, Non-local means, Rank filters, Adaptive filters
+        <div class="search-terms">Search terms: "non-linear filters," "median filter," "bilateral filter," "rank filter," "adaptive filter"</div>
+    </li>
+</ul>
+
+<h3>C. Interpolation Techniques</h3>
+<ul>
+    <li>Nearest Neighbor, Bilinear Interpolation, Bicubic Interpolation, Lanczos Resampling, Spline Interpolation
+        <div class="search-terms">Search terms: "image interpolation," "bilinear interpolation," "bicubic interpolation," "Lanczos resampling"</div>
+    </li>
+</ul>
+
+<h3>D. Frequency Domain Processing</h3>
+<ul>
+    <li>1. Fourier Transform: DFT basics, FFT implementation, Frequency spectrum analysis, Phase and magnitude, Filtering in frequency domain
+        <div class="search-terms">Search terms: "frequency domain image processing," "FFT," "DFT," "frequency spectrum analysis"</div>
+    </li>
+    <li>2. Other Transforms: Discrete Cosine Transform, Wavelet transforms, Hadamard transform, Radon transform
+        <div class="search-terms">Search terms: "DCT," "wavelet transform," "Hadamard transform," "Radon transform"</div>
+    </li>
+</ul>
+
+<h3>E. Edge Detection</h3>
+<ul>
+    <li>1. Gradient-based Methods: Sobel operator, Prewitt operator, Roberts cross operator, Scharr operator
+        <div class="search-terms">Search terms: "edge detection," "Sobel operator," "Prewitt operator," "Roberts cross"</div>
+    </li>
+    <li>2. Second Derivative Methods: Laplacian operator, Laplacian of Gaussian, Difference of Gaussians, Zero crossing detection
+        <div class="search-terms">Search terms: "Laplacian operator," "Laplacian of Gaussian," "Difference of Gaussians"</div>
+    </li>
+    <li>3. Advanced Edge Detection: Canny edge detector, Active contours, Level sets, Ridge detection
+        <div class="search-terms">Search terms: "Canny edge detector," "active contours," "level sets," "ridge detection"</div>
+    </li>
+</ul>
+ </div>
+
+
+
+
+<button class="collapsible">V. Core Feature Engineering in Image Processing</button>
+<div class="content">
+<h3>A. Low-Level Features</h3>
+<ul>
+    <li>1. Intensity-Based Features
+        <ul>
+            <li>a. Pixel Statistics: Mean, Variance, Skewness, Kurtosis, Entropy, Local Binary Patterns (LBP), Haralick Texture Features
+                <div class="search-terms">Search terms: "image statistics opencv," "local binary patterns," "Haralick features texture"</div>
+            </li>
+            <li>b. Gradient Features: Sobel, Prewitt, Laplacian, Directional Gradients
+                <div class="search-terms">Search terms: "Sobel operator," "Prewitt operator," "Laplacian of Gaussian," "directional gradients image"</div>
+            </li>
+        </ul>
+    </li>
+    <li>2. Texture Features
+        <ul>
+            <li>a. Statistical Methods: GLCM, GLRLM, Gabor Filters, Wavelet Transform Features
+                <div class="search-terms">Search terms: "GLCM texture analysis," "GLRLM texture," "Gabor filter tutorial," "wavelet transform texture features"</div>
+            </li>
+            <li>b. Structural Methods: Textons, Morphological Features, Pattern Spectrum, Fractal Dimension
+                <div class="search-terms">Search terms: "textons image analysis," "morphological features extraction," "pattern spectrum texture," "fractal dimension image"</div>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<h3>B. Mid-Level Features</h3>
+<ul>
+    <li>1. Geometric Features
+        <ul>
+            <li>Shape Descriptors: Hu Moments, Zernike Moments, Fourier Descriptors, Shape Context
+                <div class="search-terms">Search terms: "Hu Moments," "Zernike Moments," "Fourier Descriptors," "shape context"</div>
+            </li>
+            <li>Contour Features: Chain Codes, Curvature, Boundary Segments, Shape Signatures
+                <div class="search-terms">Search terms: "chain codes," "contour curvature," "boundary segments," "shape signatures"</div>
+            </li>
+        </ul>
+    </li>
+    <li>2. Local Features
+        <ul>
+            <li>Keypoint Detectors: Harris, FAST, BRIEF, ORB
+                <div class="search-terms">Search terms: "Harris corner detector," "FAST keypoint detector," "BRIEF descriptor," "ORB feature descriptor"</div>
+            </li>
+            <li>Feature Descriptors: SIFT, SURF, BRISK, FREAK
+                <div class="search-terms">Search terms: "SIFT," "SURF," "BRISK descriptor," "FREAK descriptor"</div>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<h3>C. Feature Selection and Reduction</h3>
+<ul>
+    <li>1. Dimensionality Reduction
+        <ul>
+            <li>Linear Methods: PCA, LDA, ICA
+                <div class="search-terms">Search terms: "PCA," "LDA," "ICA"</div>
+            </li>
+            <li>Non-linear Methods: t-SNE, UMAP, Kernel PCA, Autoencoders
+                <div class="search-terms">Search terms: "t-SNE," "UMAP," "Kernel PCA," "autoencoders"</div>
+            </li>
+        </ul>
+    </li>
+    <li>2. Feature Selection Methods
+        <ul>
+            <li>Filter Methods: Correlation-based, Information Gain, Chi-square Test, Variance Threshold
+                <div class="search-terms">Search terms: "feature selection," "filter methods feature selection"</div>
+            </li>
+            <li>Wrapper Methods: Forward Selection, Backward Elimination, Recursive Feature Elimination, Genetic Algorithms
+                <div class="search-terms">Search terms: "wrapper methods feature selection," "recursive feature elimination"</div>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<h3>D. Feature Engineering Pipelines</h3>
+<ul>
+    <li>1. Preprocessing Steps: Normalization Techniques, Scale Invariance, Rotation Invariance, Illumination Invariance
+        <div class="search-terms">Search terms: "feature preprocessing," "scale invariance," "rotation invariance," "illumination invariance"</div>
+    </li>
+    <li>2. Feature Fusion: Early Fusion, Late Fusion, Hybrid Fusion, Multi-modal Fusion
+        <div class="search-terms">Search terms: "feature fusion," "early fusion," "late fusion," "multi-modal fusion"</div>
+    </li>
+</ul>
+
+<h3>E. Feature Engineering Tools</h3>
+<ul>
+    <li>1. Software Libraries: OpenCV, scikit-image, Mahotas, SimpleITK
+        <div class="search-terms">Search terms: "OpenCV," "scikit-image," "Mahotas," "SimpleITK"</div>
+    </li>
+    <li>2. Feature Extraction Frameworks: PyRadiomics, PyFeats, FeatureTools, LIME
+        <div class="search-terms">Search terms: "PyRadiomics," "PyFeats," "FeatureTools," "LIME"</div>
+    </li>
+</ul>
+
+
+<h3>F. Feature Extraction</h3>
+<ul>
+    <li>Edge detection, Corner detection, SIFT/SURF features, HOG features
+        <div class="search-terms">Search terms: "edge detection," "corner detection," "SIFT," "SURF," "HOG features"</div>
+    </li>
+</ul>
+ </div>
+
+
+
+
+<button class="collapsible">VI. Deep Learning for Computer Vision</button>
+<div class="content">
+<h2>VI. Deep Learning for Computer Vision</h2>
+
+<h3>A. CNN Architectures</h3>
+<ul>
+    <li>Basic CNN Components: Convolution layers, Pooling layers, Activation functions, Fully connected layers
+        <div class="search-terms">Search terms: "CNN architecture," "convolutional layer," "pooling layer," "activation function," "fully connected layer"</div>
+    </li>
+    <li>Popular CNN Models: VGG16/19, ResNet family, Inception models, DenseNet
+        <div class="search-terms">Search terms: "VGG16," "VGG19," "ResNet," "InceptionNet," "DenseNet"</div>
+    </li>
+    <li>Advanced Architectures: EfficientNet, Vision Transformers (ViT), Swin Transformer, ConvNeXt
+        <div class="search-terms">Search terms: "EfficientNet," "Vision Transformer," "Swin Transformer," "ConvNeXt"</div>
+    </li>
+</ul>
+
+<h3>B. Transfer Learning</h3>
+<ul>
+    <li>Pre-trained models, Fine-tuning, Feature extraction
+        <div class="search-terms">Search terms: "transfer learning computer vision," "fine-tuning pre-trained models," "feature extraction transfer learning"</div>
+    </li>
+</ul>
+
+<h3>C. Object Detection</h3>
+<ul>
+    <li>Single-Stage Detectors: YOLO variants, SSD, RetinaNet, FCOS
+        <div class="search-terms">Search terms: "YOLO," "SSD object detection," "RetinaNet," "FCOS"</div>
+    </li>
+    <li>Two-Stage Detectors: R-CNN family, Faster R-CNN, Mask R-CNN, Cascade R-CNN
+        <div class="search-terms">Search terms: "R-CNN," "Faster R-CNN," "Mask R-CNN," "Cascade R-CNN"</div>
+    </li>
+    <li>Specialized Detection: Face detection, Text detection, Logo detection, Scene text recognition
+        <div class="search-terms">Search terms: "face detection," "text detection," "logo detection," "scene text recognition"</div>
+    </li>
+</ul>
+
+<h3>D. Image Segmentation</h3>
+<ul>
+    <li>Semantic Segmentation: U-Net, DeepLab, PSPNet, FCN
+        <div class="search-terms">Search terms: "semantic segmentation," "U-Net," "DeepLab," "PSPNet," "FCN"</div>
+    </li>
+    <li>Instance Segmentation: Mask R-CNN, YOLACT, SOLOv2, PointRend
+        <div class="search-terms">Search terms: "instance segmentation," "Mask R-CNN," "YOLACT," "SOLOv2," "PointRend"</div>
+    </li>
+    <li>Panoptic Segmentation: UPSNet, Panoptic FPN, DETR, MaskFormer
+        <div class="search-terms">Search terms: "panoptic segmentation," "UPSNet," "Panoptic FPN," "DETR," "MaskFormer"</div>
+    </li>
+</ul>
+
+<h3>E. Content Analysis</h3>
+<ul>
+    <li>Scene Understanding: Scene classification, Setting recognition, Context analysis, Spatial relationship
+        <div class="search-terms">Search terms: "scene understanding," "scene classification," "context analysis computer vision"</div>
+    </li>
+    <li>Quality Assessment: Blur detection, Noise estimation, Compression artifacts, Resolution analysis
+        <div class="search-terms">Search terms: "image quality assessment," "blur detection," "noise estimation," "compression artifacts"</div>
+    </li>
+    <li>Content Moderation: NSFW detection, Violence detection, Age-appropriate filtering, Brand safety
+        <div class="search-terms">Search terms: "content moderation deep learning," "NSFW detection," "violence detection"</div>
+    </li>
+</ul>
+
+<h3>F. Data Augmentation</h3>
+<ul>
+    <li>Flipping, Cropping, Rotation, Color jittering, etc.
+        <div class="search-terms">Search terms: "data augmentation computer vision," "image augmentation techniques"</div>
+    </li>
+</ul>
+
+<h3>G. Loss Functions</h3>
+<ul>
+    <li>Cross-entropy, Focal loss, Dice loss, etc.
+        <div class="search-terms">Search terms: "loss functions deep learning," "cross-entropy loss," "focal loss," "dice loss"</div>
+    </li>
+</ul>
+
+<h3>H. Optimization Algorithms</h3>
+<ul>
+    <li>Stochastic Gradient Descent (SGD), Adam, RMSprop, etc.
+        <div class="search-terms">Search terms: "optimization algorithms deep learning," "SGD," "Adam optimizer," "RMSprop"</div>
+    </li>
+</ul>
+
+
+<h3>I. Evaluation Metrics</h3>
+<ul>
+    <li>Precision, Recall, F1-score, mAP, IoU, etc.
+        <div class="search-terms">Search terms: "evaluation metrics object detection," "evaluation metrics image segmentation," "precision recall f1-score," "mAP," "IoU"</div>
+    </li>
+</ul>
+
+<h3>J. High-Level Features</h3>
+<ul>
+    <li>1. Semantic Features
+        <ul>
+            <li>a. Object-Based Features: Bounding Box Properties, Object Relationships, Spatial Arrangements, Hierarchical Features
+                <div class="search-terms">Search terms: "object-based image features," "bounding box properties," "object relationships computer vision"</div>
+            </li>
+            <li>b. Scene-Level Features: Global Scene Descriptors, Scene Graphs, Contextual Information, Semantic Segmentation Maps
+                <div class="search-terms">Search terms: "scene-level features," "scene graphs," "contextual information image," "semantic segmentation maps"</div>
+            </li>
+        </ul>
+    </li>
+    <li>2. Deep Learning Features: CNN Feature Maps (Activation Maps, Feature Visualizations, Channel Attention, Spatial Attention)
+        <div class="search-terms">Search terms: "CNN feature maps," "activation maps," "feature visualization," "channel attention," "spatial attention"</div>
+    </li>
+</ul>
+
+
+<h3>K. Domain-Specific Features</h3>
+<ul>
+    <li>1. Medical Imaging: Radiomics Features, Biomarkers, Anatomical Features, Pathological Indicators
+        <div class="search-terms">Search terms: "radiomics features," "medical image biomarkers," "anatomical features imaging"</div>
+    </li>
+    <li>2. Satellite Imaging: Spectral Features, Multi-temporal Features, Geographic Features, Environmental Indicators
+        <div class="search-terms">Search terms: "satellite image features," "spectral features remote sensing," "multi-temporal analysis"</div>
+    </li>
+    <li>3. Industrial Inspection: Defect Features, Quality Metrics, Surface Characteristics, Measurement Features
+        <div class="search-terms">Search terms: "industrial inspection computer vision," "defect detection features," "surface characteristics imaging"</div>
+    </li>
+</ul>
+ </div>
+
+
+
+
+<button class="collapsible">VII. Advanced Topics (Optional)</button>
+<div class="content">
+<h3>A. 3D Computer Vision</h3>
+<ul>
+    <li>Structure from Motion (SfM), Multi-View Stereo (MVS), Point Cloud Processing
+        <div class="search-terms">Search terms: "3D computer vision," "Structure from Motion," "Multi-View Stereo," "point cloud processing"</div>
+    </li>
+</ul>
+
+<h3>B. Generative Adversarial Networks (GANs) for Computer Vision</h3>
+<ul>
+    <li>Image generation, Style transfer, Image inpainting
+        <div class="search-terms">Search terms: "GANs for computer vision," "image generation GAN," "style transfer GAN," "image inpainting GAN"</div>
+    </li>
+</ul>
+
+<h3>C. Reinforcement Learning for Computer Vision</h3>
+<ul>
+    <li>Visual navigation, Robotic manipulation
+        <div class="search-terms">Search terms: "reinforcement learning computer vision," "visual navigation," "robotic manipulation reinforcement learning"</div>
+    </li>
+</ul>
+ </div>
+
+
+
+    <!-- Continue for all main sections -->
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
