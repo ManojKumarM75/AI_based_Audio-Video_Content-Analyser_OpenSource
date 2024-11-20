@@ -16,6 +16,11 @@ An advanced, AI-driven tool for analyzing audio/video content, aimed at open-sou
 - Regular peer study sessions and knowledge sharing
 - Gain knowledge of CNNs and other architectures (beginner to advanced)
 - Explore the intersection of AI and media technology
+- Operationalize ML ops orchestration, Feature stores,
+  Model Artifactory , Version control of model.
+- We create a product with customer centricity
+- We can be then AI consultant  & Solution Architect
+- We could sell our Talents
 
 ## 🧠 AI Architectures
 
