@@ -1,3 +1,23 @@
+# 20241120 
+"""
+an excellent point about multiple static elements in TV broadcasts! Let's enhance the detection to specifically 
+target logo regions while excluding other static elements:
+Excludes known static regions:
+News anchor area (center)
+Clock region (top center)
+Lower third graphics
+Breaking news banners
+Uses position-based scoring:
+Favors typical logo locations
+Weights corners higher than center
+Considers aspect ratio
+Implements size constraints:
+Minimum size to avoid small artifacts
+Maximum size to exclude backgrounds
+Proper aspect ratio ranges
+
+Here's how to use it:
+"""
 import cv2
 import numpy as np
 
