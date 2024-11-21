@@ -12,15 +12,15 @@ An advanced, AI-driven tool for analyzing audio/video content, aimed at open-sou
 
 ## 🌟 Why Join?
 
-- Collaborative learning environment
-- Regular peer study sessions and knowledge sharing
-- Gain knowledge of CNNs and other architectures (beginner to advanced)
+- Collaborative learning environment: peer study sessions and knowledge sharing
+- Guided by industry proffessionals.
+- Gain knowledge of Computer Visions, CNNs and other architectures 
+- ML ops orchestration, Feature stores, Model Registry
+- Product Centricity
+- Learn to Sell AI Products and our Talents as well.
+- Agile Scrum, Git management.
 - Explore the intersection of AI and media technology
-- Operationalize ML ops orchestration, Feature stores,
-  Model Registry , Version control of model.
-- We create a product with customer centricity
-- We can be then AI consultant  & Solution Architect
-- We could sell our Talents
+- Could lead to AI consultant  & Solution Architect roles
 
 ## 🧠 AI Architectures
 
